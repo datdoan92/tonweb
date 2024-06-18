@@ -11,7 +11,7 @@ export interface ContractMethods {
 }
 export interface Method {
     getQuery(): Promise<Cell>;
-    send(): Promise<any>;
+    send(returnHash?: boolean): Promise<any>;
     estimateFee(): Promise<any>;
 }
 export interface StateInit {
