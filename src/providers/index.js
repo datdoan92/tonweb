@@ -107,6 +107,15 @@ class HttpProvider {
     };
 
     /**
+     * Send serialized boc file: fully packed and serialized external message to blockchain. The method returns message hash.
+     * @param base64 {string} base64 of boc bytes Cell.toBoc
+     * @return {Promise<string>} hash of transaction
+     */
+    async sendBocReturnHash(base64) {
+        return this.send("sendBocReturnHash", {'boc': base64});
+    }
+
+    /**
      * @deprecated
      * Send external message
      * @param query     object as described https://toncenter.com/api/test/v2/#sendQuerySimple

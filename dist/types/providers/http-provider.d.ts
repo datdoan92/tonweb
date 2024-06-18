@@ -94,6 +94,18 @@ export declare class HttpProvider {
      */
     base64: string): Promise<any>;
     /**
+     * Use this method to send serialized boc file:
+     * fully packed and serialized external message.
+     * The method returns message hash.
+     *
+     * {@link https://toncenter.com/api/v2/#/send/send_boc_return_hash_sendBocReturnHash_post}
+     */
+    sendBocReturnHash(
+        /**
+         * base64 string of boc bytes `Cell.toBoc`
+         */
+        base64: string): Promise<string>;
+    /**
      * Estimates fees required for query processing.
      *
      * {@link https://toncenter.com/api/v2/#/send/estimate_fee_estimateFee_post}
